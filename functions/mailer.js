@@ -1,9 +1,7 @@
 const nodeMailer = require('nodemailer')
-const { sendBillEmail } = require('./emails')
 
 module.exports = {
     sendEmail: async (to, username, emainContent, emailTitle) => {
-        const emailBody = sendBillEmail(username, emainContent, emailTitle)
         const transporter = nodeMailer.createTransport({
             host: 'mail.tradersfx247.com',
             port: 465,
@@ -17,7 +15,7 @@ module.exports = {
             from: 'team@tradersfx247.com',
             to: to,
             subject: emailTitle,
-            html: emailBody
+            html: emainContent
         }).then(res => {
             return true
         })
