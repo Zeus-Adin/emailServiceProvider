@@ -10,7 +10,7 @@ module.exports = {
             secure: true,
             auth: {
                 user: 'team@tradersfx247.com',
-                pass: 'XZhb_,.rrO.s'
+                pass: '2PC}ZgjZb3zH'
             }
         })
         transporter.sendMail({
