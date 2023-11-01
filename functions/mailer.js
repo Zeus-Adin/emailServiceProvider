@@ -5,12 +5,12 @@ module.exports = {
     sendEmail: async (to, username, emainContent, emailTitle) => {
         const emailBody = sendBillEmail(username, emainContent, emailTitle)
         const transporter = nodeMailer.createTransport({
-            host: 'mail.bitcoinpro24.com',
+            host: 'mail.tradersfx247.com',
             port: 465,
             secure: true,
             auth: {
-                user: 'team@bitcoinpro24.com',
-                pass: 'O*p@=i7kl-yE'
+                user: 'team@tradersfx247.com',
+                pass: 'XZhb_,.rrO.s'
             }
         })
         transporter.sendMail({
