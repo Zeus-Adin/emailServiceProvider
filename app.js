@@ -23,5 +23,5 @@ app.post('/api/send/email/:recipient/:username/:emailcontent/:emailtitle', (req,
 })
 
 app.listen(process.env.PORT, () => {
-    console.log('DB connected at port 3001')
+    console.log('DB connected at port ' + process.env.PORT)
 })
