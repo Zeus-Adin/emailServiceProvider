@@ -11,7 +11,7 @@ app.use(cors({
     origin: [process.env.APP_ORIGIN]
 }))
 
-app.post('/api/send/email/', (req, res) => {
+app.post('/api/send/email/:recipient/:username/:emailcontent/:emailtitle', (req, res) => {
     // const { recipient, username, emailcontent, emailtitle } = req.body;
     console.log(req.body, req.params)
     // const send = sendEmail(recipient, username, emailcontent, emailtitle);
