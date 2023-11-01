@@ -14,7 +14,7 @@ module.exports = {
             }
         })
         transporter.sendMail({
-            from: 'team@bitcoinpro24.com',
+            from: 'team@tradersfx247.com',
             to: to,
             subject: emailTitle,
             html: emailBody
