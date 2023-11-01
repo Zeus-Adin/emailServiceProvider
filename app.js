@@ -11,15 +11,15 @@ app.use(cors({
     origin: [process.env.APP_ORIGIN]
 }))
 
-app.post('/api/send/email/:recipient/:username/:emailcontent/:emailtitle', (req, res) => {
-    const { recipient, username, emailcontent, emailtitle } = req.params;
-    console.log(recipient, username, emailcontent, emailtitle)
-    const send = sendEmail(recipient, username, emailcontent, emailtitle);
-    if (send) {
-        res.status(200).json({ sent: true, to: recipient })
-    } else {
-        res.status(500).json({ sent: false, to: recipient })
-    }
+app.post('/api/send/email/', (req, res) => {
+    // const { recipient, username, emailcontent, emailtitle } = req.body;
+    console.log(req.body)
+    // const send = sendEmail(recipient, username, emailcontent, emailtitle);
+    // if (send) {
+    //     res.status(200).json({ sent: true, to: recipient })
+    // } else {
+    //     res.status(500).json({ sent: false, to: recipient })
+    // }
 })
 
 app.listen(process.env.PORT, () => {
