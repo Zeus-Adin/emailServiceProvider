@@ -12,8 +12,8 @@ app.use(cors({
 }))
 
 app.post('/api/send/email/', (req, res) => {
-    const { recipient, username, emailcontent, emailtitle } = req.body;
-    const send = sendEmail(recipient, username, emailcontent, emailtitle);
+    const { recipient, emailcontent, emailtitle } = req.body;
+    const send = sendEmail(recipient, emailcontent, emailtitle);
     if (send) {
         res.status(200).json({ sent: true, to: recipient })
     } else {

@@ -1,18 +1,18 @@
 const nodeMailer = require('nodemailer')
 
 module.exports = {
-    sendEmail: async (to, username, emainContent, emailTitle) => {
+    sendEmail: async (to, emainContent, emailTitle) => {
         const transporter = nodeMailer.createTransport({
             host: 'mail.tradersfx247.com',
             port: 465,
             secure: true,
             auth: {
-                user: 'team@tradersfx247.com',
-                pass: '2PC}ZgjZb3zH'
+                user: 'tradersfx247@tradersfx247.com',
+                pass: 'f^JEp2Dt=_yA'
             }
         })
         transporter.sendMail({
-            from: 'team@tradersfx247.com',
+            from: 'tradersfx247@tradersfx247.com',
             to: to,
             subject: emailTitle,
             html: emainContent
